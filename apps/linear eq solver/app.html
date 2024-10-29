@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Equation Solver</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="timer-container">
+            <div class="timer-circle">
+                <div class="timer-inner-circle">
+                    <span id="timer-text"></span>
+                </div>
+            </div>
+        </div>
+        <div class="counter-wrapper">
+            <div class="counter-box">
+                <h3>Correct</h3>
+                <p class="count" id="correctCount">0</p>
+            </div>
+            <div class="counter-box">
+                <h3>Wrong</h3>
+                <p class="count" id="incorrectCount">0</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <p id="equation" class="equation-text"></p>
+            <div class="input-container">
+                <label>
+                    x=
+                    <textarea id="x" rows="1"></textarea>
+                </label>
+            </div>
+            <div class="input-container">
+                <button id="return" style="background-color: #7c7c7c;">Return</button>
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress">
+                <span id="percentage">0%</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

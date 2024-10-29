@@ -1,7 +1,7 @@
 {
-    "name": "Math Quiz",
-    "short_name": "Quiz",
-    "description": "A simple math quiz app",
+    "name": "Math Apps",
+    "short_name": "MathApps",
+    "description": "A collection of simple math quiz apps",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#f0f0f0",

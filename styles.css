@@ -1,3 +1,4 @@
+/* Add this to styles.css */
 body, html {
     margin: 0;
     padding: 0;
@@ -9,13 +10,6 @@ body, html {
     background-color: #f0f0f0;
 }
 
-.equation-text {
-    font-size: 1.5em; /* Adjust the font size as needed */
-    text-align: center;
-    margin: 10px 0;
-    margin-bottom: 25px;
-}
-
 .container {
     text-align: center;
     background: #fff;
@@ -23,195 +17,31 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
 }
 
-#answer {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    margin-top: 10px;
+h1 {
+    margin-bottom: 20px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
     background-color: #4CAF50;
     color: #fff;
-    border: none;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#result {
-    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
     font-size: 1.2em;
-}
-
-.progress-container {
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.counter-wrapper {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.counter-box {
-    width: 100px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-.count {
-    font-size: 2em;
-    margin: 0;
-    color: #333;
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 20px;
-    margin-top: 20px;
-    position: relative;
-}
-
-.progress {
-    height: 100%;
-    width: 0;
-    background-color: #4CAF50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
     font-weight: bold;
-    transition: width 0.3s;
-    position: relative;
+    transition: background-color 0.3s ease;
 }
 
-.progress span {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.timer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.timer-circle {
-    --time-percentage: 100;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(#e0e0e0 var(--time-percentage), #4CAF50 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: background 0.1s linear;
-}
-
-.timer-inner-circle {
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#timer-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Flash animation for the correct answer */
-@keyframes correct-animation {
-    0%, 100% {
-        background-color: #f0f0f0;
-        transform: scale(1);
-    }
-    50% {
-        background-color: #4CAF50;
-        transform: scale(1.05);
-    }
-}
-
-/* Shake animation for the wrong answer */
-@keyframes wrong-animation {
-    0%, 100% {
-        transform: translateX(0);
-        background-color: #f0f0f0;
-    }
-    17% {
-        transform: translateX(-2px);
-        background-color: #e25656;
-    }
-    33% {
-        transform: translateX(2px);
-    }
-    50% {
-        transform: translateX(-2px);
-    }
-    67% {
-        transform: translateX(2px);
-    }
-    83% {
-        transform: translateX(-2px);
-        background-color: #e25656;
-    }
-}
-
-/* Apply animations to the boxes */
-.correct-animation {
-    animation: correct-animation 0.6s ease-in-out;
-}
-.wrong-animation {
-    animation: wrong-animation 0.4s ease-in-out;
-}
-
-.input-container {
-    display: flex;
-    gap: 20px; /* Space between input groups */
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.input-container label {
-    display: flex;
-    align-items: center;
-    font-size: 1.2em;
-}
-
-.input-container input {
-    width: 80px; /* Increase width for larger input boxes */
-    padding: 10px;
-    font-size: 1em;
-    margin-left: 5px; /* Space between label and input */
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.grid-item:hover {
+    background-color: #45a049;
 }

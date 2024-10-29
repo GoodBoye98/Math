@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over - Math Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Times up!</h1>
+        <p id="final-score"></p>
+        <button onclick="tryAgain()">Try Again</button>
+    </div>
+
+    <script>
+        // Get score from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const correct = urlParams.get('correct');
+        const incorrect = urlParams.get('incorrect');
+        const total = parseInt(correct) + parseInt(incorrect);
+        const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+        // Display the score
+        document.getElementById('final-score').textContent = `Correct: ${correct}, Wrong: ${incorrect} (${percentage}% correct)`;
+
+        // Function to reload the quiz
+        function tryAgain() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz PWA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="timer-container">
+            <div class="timer-circle">
+                <div class="timer-inner-circle">
+                    <span id="timer-text"></span>
+                </div>
+            </div>
+        </div>
+        <div class="counter-wrapper">
+            <div class="counter-box">
+                <h3>Correct</h3>
+                <p class="count" id="correctCount">0</p>
+            </div>
+            <div class="counter-box">
+                <h3>Wrong</h3>
+                <p class="count" id="incorrectCount">0</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <p id="equation" class="equation-text"></p>
+            <div class="input-container">
+                <label>
+                    x₀=
+                    <input type="number" id="x0">
+                </label>
+                <label>
+                    x₁=
+                    <input type="number" id="x1">
+                </label>
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress">
+                <span id="percentage">0%</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

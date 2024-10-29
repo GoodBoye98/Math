@@ -25,12 +25,12 @@ function generateQuestion() {
 
     document.getElementById('equation').textContent = `\\(x^2${num1_string}${num2_string}=0\\)`;
 
+    // Re-render MathJax to display the LaTeX
+    MathJax.typesetPromise();
+
     // Store the correct roots in x0 and x1
     x0 = -a;
     x1 = -b;
-
-    // Re-render MathJax to display the LaTeX
-    MathJax.typesetPromise();
 }
 
 // Start timer

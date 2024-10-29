@@ -103,6 +103,20 @@ document.getElementById('submit').addEventListener('click', checkAnswer);
 document.getElementById('timer-text').textContent = `${timeLeft}`;
 document.querySelector('.timer-circle').style.setProperty('--time-percentage', `${0}%`);
 
+document.getElementById('x0').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent form submission if inside a form
+        document.getElementById('x1').focus();
+    }
+});
+
+document.getElementById('x1').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        checkAnswer(); // Call your submission function here
+        document.getElementById('x0').focus();
+    }
+});
+
 // Initialize the first question
 startTimer();
 generateQuestion();

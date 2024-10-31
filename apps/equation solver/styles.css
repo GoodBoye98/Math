@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.equation-text {
+    font-size: 1.0em; /* Adjust the font size as needed */
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 25px;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container textarea {
+    width: 80px;
+    padding: 10px;
+    font-size: 1em;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    vertical-align: middle; /* Align vertically */
+}
+
+.container button {
+    width: 80px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    vertical-align: middle; /* Align vertically */
+    cursor: pointer;
+}
